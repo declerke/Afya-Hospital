@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Afya Hospital</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: #fff;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .page-hero h1 { font-size: 2.5rem; margin-bottom: 12px; }
+        .page-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .breadcrumb { display: flex; justify-content: center; gap: 8px; margin-top: 16px; font-size: 0.9rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.8); text-decoration: none; }
+        .breadcrumb span { opacity: 0.6; }
+
+        .about-section { padding: 80px 0; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-grid img { width: 100%; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
+        .about-content h2 { font-size: 2rem; color: #1a1a2e; margin-bottom: 16px; }
+        .about-content p { color: #555; line-height: 1.8; margin-bottom: 16px; }
+
+        .stats-section { background: #f8faff; padding: 60px 0; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; text-align: center; }
+        .stat-card { background: #fff; border-radius: 12px; padding: 30px 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.07); }
+        .stat-card .number { font-size: 2.5rem; font-weight: 700; color: #1a73e8; }
+        .stat-card .label { color: #555; margin-top: 8px; }
+
+        .values-section { padding: 80px 0; }
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+        .value-card { background: #fff; border: 1px solid #e8ecf0; border-radius: 12px; padding: 30px; }
+        .value-card i { font-size: 2rem; color: #1a73e8; margin-bottom: 16px; }
+        .value-card h3 { font-size: 1.2rem; color: #1a1a2e; margin-bottom: 10px; }
+        .value-card p { color: #666; line-height: 1.7; }
+
+        .team-section { padding: 80px 0; background: #f8faff; }
+
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .values-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-blue">Afya</span>
+                    <span class="logo-dark">Hospital</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="medical-history.php">Medical History</a></li>
+                    <li><a href="billing.php">Billing</a></li>
+                    <li><a href="feedback.php">Feedback</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="book-appointment.php" class="btn btn-primary">Book Appointment</a>
+                <div class="phone-number">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>1-800-AFYA</span>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>About Afya Hospital</h1>
+            <p>Dedicated to providing compassionate, high-quality healthcare to every patient</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>About Us</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="images/aa.jpg" alt="Afya Hospital">
+                </div>
+                <div class="about-content">
+                    <h2>Who We Are</h2>
+                    <p>Afya Hospital is a premier healthcare institution based in Nairobi, Kenya, committed to delivering world-class medical services to our community. Founded on the principles of compassion, integrity, and excellence, we have been serving patients and their families for over a decade.</p>
+                    <p>Our state-of-the-art facilities are equipped with the latest medical technology, and our team of highly trained doctors, nurses, and support staff work tirelessly to ensure every patient receives personalized, effective care.</p>
+                    <p>We believe that access to quality healthcare is a right, not a privilege. That is why we strive to make our services affordable, accessible, and patient-centered at every step of the care journey.</p>
+                    <a href="book-appointment.php" class="btn btn-primary">Book an Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="number">10+</div>
+                    <div class="label">Years of Service</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">50+</div>
+                    <div class="label">Expert Doctors</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">15,000+</div>
+                    <div class="label">Patients Served</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">6</div>
+                    <div class="label">Specialties</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Values</h2>
+                <p>The principles that guide everything we do</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Compassion</h3>
+                    <p>We treat every patient with empathy, dignity, and respect, recognizing the trust they place in us during vulnerable moments.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Excellence</h3>
+                    <p>We are committed to the highest standards of medical care, continuously improving our skills, technology, and processes.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Integrity</h3>
+                    <p>We uphold honesty and transparency in all our interactions with patients, families, and the broader community.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Teamwork</h3>
+                    <p>Our multidisciplinary teams collaborate seamlessly to deliver comprehensive, coordinated care for every patient.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>We embrace new technologies and evidence-based practices to stay at the forefront of modern medicine.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-globe-africa"></i>
+                    <h3>Community</h3>
+                    <p>We are deeply rooted in our community, actively participating in health education and preventive care programs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Doctors</h2>
+                <p>Experienced healthcare professionals dedicated to your wellbeing</p>
+            </div>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="images/doc1.jpg" alt="Dr. Allan Thiong'o">
+                    </div>
+                    <h3>Dr. Allan Thiong'o</h3>
+                    <p class="doctor-specialty">Surgeon</p>
+                    <p class="doctor-description">Experienced surgeon specializing in minimally invasive procedures.</p>
+                    <a href="book-appointment.php?doctor=1" class="btn btn-outline btn-sm">Book Appointment</a>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="images/doctor-thumb-06.jpg" alt="Dr. Andrew Romell">
+                    </div>
+                    <h3>Dr. Andrew Romell</h3>
+                    <p class="doctor-specialty">Cardiologist</p>
+                    <p class="doctor-description">Specialized in diagnosing and treating heart conditions.</p>
+                    <a href="book-appointment.php?doctor=2" class="btn btn-outline btn-sm">Book Appointment</a>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="images/fdoc8.jpeg" alt="Dr. Jackline Matindi">
+                    </div>
+                    <h3>Dr. Jackline Matindi</h3>
+                    <p class="doctor-specialty">Neurologist</p>
+                    <p class="doctor-description">Expert in treating disorders of the nervous system.</p>
+                    <a href="book-appointment.php?doctor=3" class="btn btn-outline btn-sm">Book Appointment</a>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="images/doctor-thumb-08.jpg" alt="Dr. Fatuma Onyango">
+                    </div>
+                    <h3>Dr. Fatuma Onyango</h3>
+                    <p class="doctor-specialty">Pediatrician</p>
+                    <p class="doctor-description">Dedicated to providing quality healthcare for children.</p>
+                    <a href="book-appointment.php?doctor=4" class="btn btn-outline btn-sm">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <span class="logo-blue">Afya</span>
+                        <span class="logo-white">Hospital</span>
+                    </div>
+                    <p>Providing quality healthcare services with a patient-centered approach. Our team of experts is dedicated to your well-being.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="book-appointment.php">Appointments</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#cardiology">Cardiology</a></li>
+                        <li><a href="services.html#neurology">Neurology</a></li>
+                        <li><a href="services.html#pediatrics">Pediatrics</a></li>
+                        <li><a href="services.html#orthopedics">Orthopedics</a></li>
+                        <li><a href="services.html#general-medicine">General Medicine</a></li>
+                        <li><a href="services.html#surgery">Surgery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 Hospital Road, Nairobi, Kenya</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+254 712 345 678</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@afyahospital.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Afya Hospital. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

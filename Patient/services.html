@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Afya Hospital</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: #fff;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .page-hero h1 { font-size: 2.5rem; margin-bottom: 12px; }
+        .page-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .breadcrumb { display: flex; justify-content: center; gap: 8px; margin-top: 16px; font-size: 0.9rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.8); text-decoration: none; }
+        .breadcrumb span { opacity: 0.6; }
+
+        .service-detail {
+            padding: 80px 0;
+        }
+        .service-detail:nth-child(even) {
+            background: #f8faff;
+        }
+        .service-detail-grid {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+        .service-detail-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1a73e8, #0d47a1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        .service-detail-content h2 {
+            font-size: 1.8rem;
+            color: #1a1a2e;
+            margin-bottom: 16px;
+        }
+        .service-detail-content p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        .service-detail-content ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 24px;
+        }
+        .service-detail-content ul li {
+            padding: 6px 0;
+            color: #444;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .service-detail-content ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #1a73e8;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-blue">Afya</span>
+                    <span class="logo-dark">Hospital</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="medical-history.php">Medical History</a></li>
+                    <li><a href="billing.php">Billing</a></li>
+                    <li><a href="feedback.php">Feedback</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="book-appointment.php" class="btn btn-primary">Book Appointment</a>
+                <div class="phone-number">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>1-800-AFYA</span>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Comprehensive healthcare services tailored to meet all your medical needs</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Services</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cardiology -->
+    <section id="cardiology" class="service-detail">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="service-detail-content">
+                    <h2>Cardiology</h2>
+                    <p>Our Cardiology department offers comprehensive diagnosis and treatment of heart and cardiovascular diseases. We use state-of-the-art diagnostic technology combined with evidence-based treatment protocols to provide the best cardiac care available.</p>
+                    <p>Our team of experienced cardiologists works closely with patients to develop personalized treatment plans that address both acute and chronic cardiac conditions.</p>
+                    <ul>
+                        <li>Echocardiography and stress testing</li>
+                        <li>Cardiac catheterization and angioplasty</li>
+                        <li>Arrhythmia management and pacemaker insertion</li>
+                        <li>Heart failure management programs</li>
+                        <li>Preventive cardiology and lifestyle counseling</li>
+                    </ul>
+                    <a href="book-appointment.php" class="btn btn-primary">Book Cardiology Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neurology -->
+    <section id="neurology" class="service-detail">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="service-detail-content">
+                    <h2>Neurology</h2>
+                    <p>The Neurology department at Afya Hospital specializes in diagnosing and treating disorders of the brain, spinal cord, nerves, and muscles. Our neurologists are trained to manage a wide spectrum of neurological conditions using the latest therapeutic approaches.</p>
+                    <p>We combine advanced neuroimaging with clinical expertise to deliver accurate diagnoses and effective treatment plans for our patients.</p>
+                    <ul>
+                        <li>Stroke diagnosis and management</li>
+                        <li>Epilepsy and seizure disorders</li>
+                        <li>Multiple sclerosis treatment</li>
+                        <li>Parkinson's disease and movement disorders</li>
+                        <li>Headache and migraine clinics</li>
+                    </ul>
+                    <a href="book-appointment.php" class="btn btn-primary">Book Neurology Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pediatrics -->
+    <section id="pediatrics" class="service-detail">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-icon">
+                    <i class="fas fa-baby"></i>
+                </div>
+                <div class="service-detail-content">
+                    <h2>Pediatrics</h2>
+                    <p>Our Pediatrics department provides compassionate, family-centered healthcare for children from birth through adolescence. We understand that children are not just small adults — they have unique medical needs that require specialized knowledge and a caring, child-friendly environment.</p>
+                    <p>Our pediatricians partner with parents and caregivers to support healthy growth and development at every stage of childhood.</p>
+                    <ul>
+                        <li>Newborn care and neonatal services</li>
+                        <li>Immunizations and well-child visits</li>
+                        <li>Developmental screening and monitoring</li>
+                        <li>Pediatric chronic disease management</li>
+                        <li>Adolescent health and counseling</li>
+                    </ul>
+                    <a href="book-appointment.php" class="btn btn-primary">Book Pediatrics Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Orthopedics -->
+    <section id="orthopedics" class="service-detail">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-icon">
+                    <i class="fas fa-bone"></i>
+                </div>
+                <div class="service-detail-content">
+                    <h2>Orthopedics</h2>
+                    <p>The Orthopedics department specializes in diagnosing, treating, and rehabilitating conditions affecting the musculoskeletal system — bones, joints, ligaments, tendons, and muscles. Our orthopedic surgeons combine advanced surgical techniques with non-surgical treatments to restore mobility and relieve pain.</p>
+                    <p>We offer both conservative management and cutting-edge surgical interventions tailored to each patient's specific condition and lifestyle.</p>
+                    <ul>
+                        <li>Joint replacement (hip, knee, shoulder)</li>
+                        <li>Sports injury treatment and rehabilitation</li>
+                        <li>Spine surgery and disc procedures</li>
+                        <li>Fracture management and trauma care</li>
+                        <li>Arthritis and joint pain management</li>
+                    </ul>
+                    <a href="book-appointment.php" class="btn btn-primary">Book Orthopedics Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- General Medicine -->
+    <section id="general-medicine" class="service-detail">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <div class="service-detail-content">
+                    <h2>General Medicine</h2>
+                    <p>Our General Medicine department serves as the primary point of care for patients of all ages. Our general practitioners are trained to diagnose, treat, and manage a wide variety of medical conditions, as well as coordinate referrals to specialist departments when needed.</p>
+                    <p>We emphasize preventive care and health education to help patients maintain good health and manage chronic conditions effectively.</p>
+                    <ul>
+                        <li>Routine check-ups and health screenings</li>
+                        <li>Management of chronic diseases (diabetes, hypertension)</li>
+                        <li>Acute illness and infection treatment</li>
+                        <li>Vaccinations and travel medicine</li>
+                        <li>Referrals and care coordination</li>
+                    </ul>
+                    <a href="book-appointment.php" class="btn btn-primary">Book General Medicine Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Surgery -->
+    <section id="surgery" class="service-detail">
+        <div class="container">
+            <div class="service-detail-grid">
+                <div class="service-detail-icon">
+                    <i class="fas fa-procedures"></i>
+                </div>
+                <div class="service-detail-content">
+                    <h2>Surgery</h2>
+                    <p>Afya Hospital's Surgical department is equipped with modern operating theatres and staffed by a team of highly skilled surgeons across multiple specialties. We perform both elective and emergency surgical procedures using the latest minimally invasive techniques to minimize recovery time and improve outcomes.</p>
+                    <p>Our surgical team works collaboratively with anesthesiologists, nurses, and support staff to ensure patient safety and comfort before, during, and after every procedure.</p>
+                    <ul>
+                        <li>Laparoscopic and minimally invasive surgery</li>
+                        <li>Abdominal and gastrointestinal procedures</li>
+                        <li>Emergency and trauma surgery</li>
+                        <li>Oncological surgical procedures</li>
+                        <li>Pre- and post-operative care programs</li>
+                    </ul>
+                    <a href="book-appointment.php" class="btn btn-primary">Book Surgery Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <span class="logo-blue">Afya</span>
+                        <span class="logo-white">Hospital</span>
+                    </div>
+                    <p>Providing quality healthcare services with a patient-centered approach. Our team of experts is dedicated to your well-being.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="book-appointment.php">Appointments</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#cardiology">Cardiology</a></li>
+                        <li><a href="services.html#neurology">Neurology</a></li>
+                        <li><a href="services.html#pediatrics">Pediatrics</a></li>
+                        <li><a href="services.html#orthopedics">Orthopedics</a></li>
+                        <li><a href="services.html#general-medicine">General Medicine</a></li>
+                        <li><a href="services.html#surgery">Surgery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 Hospital Road, Nairobi, Kenya</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+254 712 345 678</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@afyahospital.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Afya Hospital. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

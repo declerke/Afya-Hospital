@@ -1,0 +1,35 @@
+# Database credentials
+Backend/db_connect.php
+Doctor/db_connect.php
+Patient/config/db.php
+
+# Uploaded patient files (encrypted documents)
+Backend/assets/fileuploads/
+Doctor/assets/fileuploads/
+Patient/assets/fileuploads/
+
+# Uploaded profile images (runtime-generated)
+Backend/assets/img/*.jpg
+Backend/assets/img/*.jpeg
+Backend/assets/img/*.png
+Backend/assets/img/*.gif
+
+# Logs
+Doctor/debug.log
+*.log
+
+# TCPDF font cache and temp files
+Doctor/tcpdf/fonts/*.php
+Doctor/tcpdf/cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Personal notes
+*.txt
+projectsummary.md

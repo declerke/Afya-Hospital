@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors - Afya Hospital</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: #fff;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .page-hero h1 { font-size: 2.5rem; margin-bottom: 12px; }
+        .page-hero p { font-size: 1.1rem; opacity: 0.9; }
+        .breadcrumb { display: flex; justify-content: center; gap: 8px; margin-top: 16px; font-size: 0.9rem; }
+        .breadcrumb a { color: rgba(255,255,255,0.8); text-decoration: none; }
+        .breadcrumb span { opacity: 0.6; }
+
+        .doctors-page { padding: 80px 0; }
+        .department-filter {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+        .filter-btn {
+            padding: 8px 20px;
+            border: 2px solid #1a73e8;
+            border-radius: 30px;
+            background: transparent;
+            color: #1a73e8;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: #1a73e8;
+            color: #fff;
+        }
+        .doctor-bio {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 4px;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .cta-section h2 { font-size: 2rem; margin-bottom: 16px; }
+        .cta-section p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 32px; }
+        .btn-white {
+            background: #fff;
+            color: #1a73e8;
+            border: none;
+        }
+        .btn-white:hover { background: #f0f4ff; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <span class="logo-blue">Afya</span>
+                    <span class="logo-dark">Hospital</span>
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="medical-history.php">Medical History</a></li>
+                    <li><a href="billing.php">Billing</a></li>
+                    <li><a href="feedback.php">Feedback</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="book-appointment.php" class="btn btn-primary">Book Appointment</a>
+                <div class="phone-number">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>1-800-AFYA</span>
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Doctors</h1>
+            <p>Meet our team of highly qualified and compassionate healthcare professionals</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Doctors</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Listing -->
+    <section class="doctors-page">
+        <div class="container">
+            <div class="department-filter">
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Cardiology</button>
+                <button class="filter-btn">Neurology</button>
+                <button class="filter-btn">Pediatrics</button>
+                <button class="filter-btn">Orthopedics</button>
+                <button class="filter-btn">Surgery</button>
+                <button class="filter-btn">General Medicine</button>
+            </div>
+
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="images/doc1.jpg" alt="Dr. Allan Thiong'o">
+                    </div>
+                    <h3>Dr. Allan Thiong'o</h3>
+                    <p class="doctor-specialty">Surgeon</p>
+                    <p class="doctor-description">Experienced surgeon specializing in minimally invasive procedures with over 8 years of surgical expertise.</p>
+                    <a href="book-appointment.php?doctor=1" class="btn btn-outline btn-sm">Book Appointment</a>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="images/doctor-thumb-06.jpg" alt="Dr. Andrew Romell">
+                    </div>
+                    <h3>Dr. Andrew Romell</h3>
+                    <p class="doctor-specialty">Cardiologist</p>
+                    <p class="doctor-description">Specialized in diagnosing and treating heart conditions including coronary artery disease and heart failure.</p>
+                    <a href="book-appointment.php?doctor=2" class="btn btn-outline btn-sm">Book Appointment</a>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="images/fdoc8.jpeg" alt="Dr. Jackline Matindi">
+                    </div>
+                    <h3>Dr. Jackline Matindi</h3>
+                    <p class="doctor-specialty">Neurologist</p>
+                    <p class="doctor-description">Expert in treating disorders of the nervous system including epilepsy, stroke, and multiple sclerosis.</p>
+                    <a href="book-appointment.php?doctor=3" class="btn btn-outline btn-sm">Book Appointment</a>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="images/doctor-thumb-08.jpg" alt="Dr. Fatuma Onyango">
+                    </div>
+                    <h3>Dr. Fatuma Onyango</h3>
+                    <p class="doctor-specialty">Pediatrician</p>
+                    <p class="doctor-description">Dedicated to providing quality healthcare for children from newborns through adolescence.</p>
+                    <a href="book-appointment.php?doctor=4" class="btn btn-outline btn-sm">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to See One of Our Doctors?</h2>
+            <p>Book an appointment online and get the care you need from our expert team.</p>
+            <a href="book-appointment.php" class="btn btn-white">Book an Appointment</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <span class="logo-blue">Afya</span>
+                        <span class="logo-white">Hospital</span>
+                    </div>
+                    <p>Providing quality healthcare services with a patient-centered approach. Our team of experts is dedicated to your well-being.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="book-appointment.php">Appointments</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#cardiology">Cardiology</a></li>
+                        <li><a href="services.html#neurology">Neurology</a></li>
+                        <li><a href="services.html#pediatrics">Pediatrics</a></li>
+                        <li><a href="services.html#orthopedics">Orthopedics</a></li>
+                        <li><a href="services.html#general-medicine">General Medicine</a></li>
+                        <li><a href="services.html#surgery">Surgery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 Hospital Road, Nairobi, Kenya</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+254 712 345 678</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@afyahospital.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Afya Hospital. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
