@@ -93,4 +93,4 @@ FINALPROJECT2025/
 
 ## Contributors
 
-- [Ian Mboya](https://github.com/declerke)
+- [Ian Mboyo](https://github.com/declerke)
