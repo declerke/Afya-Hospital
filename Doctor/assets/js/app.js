@@ -407,9 +407,9 @@ function loadProfile() {
 
                 // Update Edit Profile button link
                 if (userType === 'admin') {
-                    $('#edit-profile-btn').attr('href', 'edit-profile.html');
+                    $('#edit-profile-btn').attr('href', 'edit-profile.php');
                 } else if (userType === 'doctor') {
-                    $('#edit-profile-btn').attr('href', 'edit-doctor.html?id=' + userId);
+                    $('#edit-profile-btn').attr('href', 'edit-profile.php');
                 }
 
                 // Load education and experience using staff_id

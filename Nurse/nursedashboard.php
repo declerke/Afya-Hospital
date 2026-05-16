@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once 'session_check.php';
 require_once '../Backend/db_connect.php';
 
@@ -47,6 +47,7 @@ try {
     <link rel="shortcut icon" type="image/x-icon" href="../Backend/assets/img/favicon.ico">
     <title>Afya Hospital - Nurse Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../Backend/assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../Backend/assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../Backend/assets/css/style.css">
     <style>

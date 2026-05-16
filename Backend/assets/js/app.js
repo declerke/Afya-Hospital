@@ -355,9 +355,11 @@ $(document).ready(function () {
         });
     });
 
-    // Refresh notifications every 5 seconds
-    setInterval(loadNotifications, 5000);
-    loadNotifications(); // Initial load
+    // Only run on pages that have the notification UI
+    if ($("#notification-list").length) {
+        loadNotifications();
+        setInterval(loadNotifications, 5000);
+    }
 });
 
 
@@ -497,9 +499,11 @@ function loadExperience(staffId) {
     });
 }
 
-// Load profile when the page loads
+// Load profile when the page loads (only on pages that have the profile UI)
 $(document).ready(function() {
-    loadProfile();
+    if ($('#user-name').length) {
+        loadProfile();
+    }
 });
 
 
@@ -527,8 +531,10 @@ $(document).ready(function() {
         });
     }
 
-    updateCounts(); // Call function when page loads
-    setInterval(updateCounts, 10000); // Update every 10 seconds
+    if ($('.doctor-count').length) {
+        updateCounts();
+        setInterval(updateCounts, 10000);
+    }
 });
 
 
@@ -714,7 +720,7 @@ $(document).ready(function() {
             },
             error: function(xhr, status, error) {
                 console.error('AJAX error for patient totals:', error);
-                alert('Yo, bro, couldn’t grab the patient total data!');
+                console.error(‘Could not load patient total data:’, error);
             }
         });
     }
@@ -876,7 +882,7 @@ $(document).ready(function() {
             },
             error: function(xhr, status, error) {
                 console.error('AJAX error for patient in data:', error);
-                alert('Yo, bro, couldn’t grab the patient in data!');
+                console.error(‘Could not load patient graph data:’, error);
             }
         });
     }
@@ -953,20 +959,19 @@ $(document).ready(function() {
             },
             error: function(xhr, status, error) {
                 console.error('AJAX error for appointments:', error);
-                alert('Yo, bro, couldn’t grab the appointment data!');
+                console.error(‘Could not load appointment data:’, error);
             }
         });
     }
 
-    // Run all updates on page load
-    updatePatientGraph();
-    updatePatientInGraph();
-    updateAppointmentsTable();
+    // Run all updates on page load — only when the target elements exist
+    if ($('#linegraph').length)                    updatePatientGraph();
+    if ($('#bargraph').length)                     updatePatientInGraph();
+    if ($('#upcoming-appointments-table').length)  updateAppointmentsTable();
 
-    // Refresh all updates every 60 seconds for real-time updates
-    setInterval(updatePatientGraph, 60000);
-    setInterval(updatePatientInGraph, 60000);
-    setInterval(updateAppointmentsTable, 60000);
+    if ($('#linegraph').length)                    setInterval(updatePatientGraph, 60000);
+    if ($('#bargraph').length)                     setInterval(updatePatientInGraph, 60000);
+    if ($('#upcoming-appointments-table').length)  setInterval(updateAppointmentsTable, 60000);
 });
 
 
@@ -1012,11 +1017,10 @@ $(document).ready(function() {
         });
     }
 
-    // Initial load
-    updateDoctors();
-
-    // Refresh every 10 seconds (sync with existing updateCounts interval)
-    setInterval(updateDoctors, 10000);
+    if ($('.contact-list').length) {
+        updateDoctors();
+        setInterval(updateDoctors, 10000);
+    }
 
 
 
@@ -1337,13 +1341,10 @@ function updateNewPatients() {
     });
 }
 
-// Initial load
-updateNewPatients();
-
-// Refresh every 10 seconds (sync with existing updateCounts interval)
-setInterval(function() {
+if ($('.new-patient-table').length) {
     updateNewPatients();
-}, 10000);
+    setInterval(updateNewPatients, 10000);
+}
 
 
 
@@ -1511,12 +1512,11 @@ $('#delete_patient').on('show.bs.modal', function(event) {
     });
 });
 
-// Initial load and refresh
 $(document).ready(function() {
-    updatePatients(); // Initial load
-    setInterval(function() {
+    if ($('#patientTableBody').length) {
         updatePatients();
-    }, 100000);
+        setInterval(updatePatients, 100000);
+    }
 });
 
 
@@ -1610,8 +1610,9 @@ $(document).ready(function() {
         });
     }
 
-    // Initial load
-    fetchSchedules(currentPage);
+    if ($('#scheduleTableBody').length) {
+        fetchSchedules(currentPage);
+    }
 
     // Search functionality
     $('#scheduleSearchInput').on('input', function() {
@@ -1722,8 +1723,9 @@ $(document).ready(function() {
         });
     }
 
-    // Initial load
-    fetchAuditLogs(auditLogCurrentPage);
+    if ($('#auditLogsTableBody').length) {
+        fetchAuditLogs(auditLogCurrentPage);
+    }
 
     // Search functionality
     $('#auditLogSearchInput').on('input', function() {
@@ -1810,8 +1812,9 @@ $(document).ready(function() {
         });
     }
 
-    // Initial load
-    fetchChatbotLogs(chatbotLogCurrentPage);
+    if ($('#chatbotLogsTableBody').length) {
+        fetchChatbotLogs(chatbotLogCurrentPage);
+    }
 
     // Search functionality
     $('#chatbotLogSearchInput').on('input', function() {
@@ -1930,8 +1933,9 @@ $(document).ready(function() {
         });
     }
 
-    // Initial load
-    fetchEmployees(employeeCurrentPage);
+    if ($('#employeesTableBody').length) {
+        fetchEmployees(employeeCurrentPage);
+    }
 
     // General search functionality (main search bar)
     $('#employeeSearchInput').on('input', function() {
@@ -2170,8 +2174,9 @@ $(document).ready(function() {
         });
     }
 
-    // Initial load
-    fetchFeedback(feedbackCurrentPage);
+    if ($('#feedbackTableBody').length) {
+        fetchFeedback(feedbackCurrentPage);
+    }
 
     // Search functionality
     $('#feedbackSearchInput').on('input', function() {
@@ -2279,8 +2284,9 @@ $(document).ready(function() {
         });
     }
 
-    // Initial load
-    fetchUsers(userCurrentPage);
+    if ($('#usersTableBody').length) {
+        fetchUsers(userCurrentPage);
+    }
 
     // Search functionality
     $('#userSearchInput').on('input', function() {
@@ -2482,8 +2488,9 @@ $(document).ready(function() {
         });
     }
 
-    // Initial load
-    fetchNotifications(notificationCurrentPage);
+    if ($('#notificationsTableBody').length) {
+        fetchNotifications(notificationCurrentPage);
+    }
 
     // Search functionality
     $('#notificationSearchInput').on('input', function() {

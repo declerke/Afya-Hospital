@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once 'session_check.php';
 require_once '../Backend/db_connect.php';
 
@@ -39,9 +39,9 @@ $schedules = [];
 try {
     $stmt = $pdo->query(
         "SELECT s.*, CONCAT(d.first_name,' ',d.last_name) AS doctor_name
-         FROM schedules s
+         FROM doctor_schedule s
          JOIN doctors d ON s.doctor_id = d.id
-         ORDER BY s.available_date ASC
+         ORDER BY s.schedule_date ASC
          LIMIT 10"
     );
     $schedules = $stmt->fetchAll();
@@ -55,6 +55,7 @@ try {
     <link rel="shortcut icon" type="image/x-icon" href="../Backend/assets/img/favicon.ico">
     <title>Afya Hospital - Hospital Staff Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../Backend/assets/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../Backend/assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../Backend/assets/css/style.css">
     <style>
@@ -197,8 +198,8 @@ try {
                                         <?php foreach ($schedules as $sc): ?>
                                         <tr>
                                             <td>Dr. <?php echo htmlspecialchars($sc['doctor_name']); ?></td>
-                                            <td><?php echo htmlspecialchars($sc['available_date'] ?? '—'); ?></td>
-                                            <td><?php echo htmlspecialchars($sc['shift'] ?? '—'); ?></td>
+                                            <td><?php echo htmlspecialchars($sc['schedule_date'] ?? '—'); ?></td>
+                                            <td><?php echo htmlspecialchars($sc['status'] ?? '—'); ?></td>
                                         </tr>
                                         <?php endforeach; ?>
                                     <?php endif; ?>

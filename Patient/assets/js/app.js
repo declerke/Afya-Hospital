@@ -713,8 +713,7 @@ $(document).ready(function() {
                 `);
             },
             error: function(xhr, status, error) {
-                console.error('AJAX error for patient totals:', error);
-                alert('Yo, bro, couldn’t grab the patient total data!');
+                console.error(‘Could not load patient total data:’, error);
             }
         });
     }
@@ -875,8 +874,7 @@ $(document).ready(function() {
                 `);
             },
             error: function(xhr, status, error) {
-                console.error('AJAX error for patient in data:', error);
-                alert('Yo, bro, couldn’t grab the patient in data!');
+                console.error(‘Could not load patient graph data:’, error);
             }
         });
     }
@@ -952,21 +950,18 @@ $(document).ready(function() {
                 });
             },
             error: function(xhr, status, error) {
-                console.error('AJAX error for appointments:', error);
-                alert('Yo, bro, couldn’t grab the appointment data!');
+                console.error(‘Could not load appointment data:’, error);
             }
         });
     }
 
-    // Run all updates on page load
-    updatePatientGraph();
-    updatePatientInGraph();
-    updateAppointmentsTable();
+    if ($(‘#linegraph’).length)                    updatePatientGraph();
+    if ($(‘#bargraph’).length)                     updatePatientInGraph();
+    if ($(‘#upcoming-appointments-table’).length)  updateAppointmentsTable();
 
-    // Refresh all updates every 60 seconds for real-time updates
-    setInterval(updatePatientGraph, 60000);
-    setInterval(updatePatientInGraph, 60000);
-    setInterval(updateAppointmentsTable, 60000);
+    if ($(‘#linegraph’).length)                    setInterval(updatePatientGraph, 60000);
+    if ($(‘#bargraph’).length)                     setInterval(updatePatientInGraph, 60000);
+    if ($(‘#upcoming-appointments-table’).length)  setInterval(updateAppointmentsTable, 60000);
 });
 
 
