@@ -94,3 +94,5 @@ FINALPROJECT2025/
 ## Contributors
 
 - [Ian Mboyo](https://github.com/declerke)
+- [Erick Karanja](https://github.com/EricKaranja17)
+- [Derrick Gatu](https://github.com/w-s-maker)
